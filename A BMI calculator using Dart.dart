@@ -19,20 +19,16 @@ String getBMICategory(double bmi) {
 
 // Part C: Main function
 void main() {
-  // Taking input from user
-  print("Enter your weight in kg:");
-  String? weightInput = stdin.readLineSync();
-  double weight = double.parse(weightInput!);
+  print('Enter your weight in kg:');
+  double weight = double.parse(stdin.readLineSync()!); //for input
+  
+  print('Enter your height in meter:');
+  double height = double.parse(stdin.readLineSync()!); //for input
 
-  print("Enter your height in meters:");
-  String? heightInput = stdin.readLineSync();
-  double height = double.parse(heightInput!);
-
-  // Calculate BMI
   double bmi = calculateBMI(weight, height);
   String category = getBMICategory(bmi);
 
-  // Output
   print("Your BMI is: ${bmi.toStringAsFixed(2)}");
   print("Category: $category");
 }
+
